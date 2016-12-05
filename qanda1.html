@@ -13,23 +13,21 @@ function alertradio(){
 }
 function get_radio() {
 
-    // alert(sessionStorage.getItem("readtime"));
+    alert(sessionStorage.getItem("readtime"));
+
     first = $("input[name='radio1']:checked").val();
     second = $("input[name='radio2']:checked").val();
     
     if (first == null || second == null) {
-        alert("请为每个测试至少选择1个选项 !");
+        alert("Please chose at least one radio for each question !");
     } else {
-       // going on
+        alert(first +"    "+second);
     }
 
-    sessionStorage.setItem('A', first);
-    sessionStorage.setItem('B',second);
-
-    // if(first == "B")
-    // {
-    window.location.href="ans1.html"
-    // }
+    if(first == "B")
+    {
+    	window.location.href="index.html"
+    }
 }
 </script>
 
